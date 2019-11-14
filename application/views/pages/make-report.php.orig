@@ -1,0 +1,168 @@
+<div class="page-body">
+	<div class="container">
+		<div class="section-title">
+			<h3>Make Waste Report</h3>
+		</div>
+		<div class="section-body">
+<<<<<<< HEAD
+			<form id="form-addadmin" method="post" action="<?=base_url()?>index.php/HomeController/insert">
+=======
+			<form id="form-add-waste-report" method="post">
+>>>>>>> 725e0eee565a13d175720cf623165eea2d3363c8
+				<div class="form-group">
+                	<div class="row">
+						<div class="col-md-6">
+							<div class="label-input">College <span class="required">*</span></div>
+							<select class="form-control required-input" name="college" id="college" data-parsley-required="true">
+		                    	<option value="">Select College</option>
+		                	</select>
+						</div>
+						<div class="col-md-6">
+							<div class="label-input">Department <span class="required">*</span></div>
+							<select class="form-control required-input" name="department" id="department" data-parsley-required="true">
+	                        	<option value="">Select Department</option>
+	                    	</select>
+						</div>
+					</div>
+
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="label-input">Building <span class="required">*</span></div>
+							<select class="form-control required-input" name="building" id="building" data-parsley-required="true">
+                            	<option value="">Select Building</option>
+                        	</select>	
+						</div>
+						<div class="col-md-6">
+							<div class="label-input">Laboratory Number <span class="required">*</span></div>
+							<input type="text" class="form-control required-input" name="laboratory_number" id="laboratory_number">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="label-input">Contact Person <span class="required">*</span></div>
+							<input type="text" class="form-control required-input" name="contact_person" id="contact_person">
+						</div>
+						<div class="col-md-4">
+							<div class="label-input">Person Number <span class="required">*</span></div>
+							<input type="text" class="form-control required-input" name="contact_person_number" id="contact_person_number">
+						</div>
+						<div class="col-md-4">
+							<div class="label-input">Date <span class="required">*</span></div>
+							<input type="date" class="form-control required-input" name="date" id="date">
+						</div>
+					</div>
+				</div>
+<<<<<<< HEAD
+			<hr>
+			<div class="chem-table-fields">
+			<div class="form-group chem-fields"> 
+=======
+			</form>
+			<div class="form-group"> 
+>>>>>>> 725e0eee565a13d175720cf623165eea2d3363c8
+					<div class="row">
+						<div class="col-md-12">
+							<table id="table-chem-fields" class="table table-hover" cellspacing="0" width="100%">
+								<thead>
+									<tr>
+										<th width="15%">HW Number</th>
+										<th width="15%">Bottle Number</th>
+										<th width="15%">Sticker Number</th>
+										<th width="10%">Remaining Qty.</th>
+										<th width="10%">Remaining Unit</th>
+										<th width="10%">Quantity in kg</th>
+										<th width="10%">Quantity Unit</th>
+										<th width="8%">Action</th>
+									</tr>
+								</thead>
+								<tbody class="tbody-chem-fields">
+									<tr id="tr-chem-field0">
+										<td>
+										<select class="form-control required-input hw_number" name="hw_number[]" id="hw_number" data-parsley-required="true">
+											<option value="">Select HW</option>
+			                            	<option value="D499">D499</option>
+			                        	</select>	
+                        				</td>
+										<td><input type="text" class="form-control required-input bottle_number" name="bottle_number[]" id="bottle_number"></td>
+										<td><input type="text" class="form-control required-input sticker_number" name="sticker_number[]" id="sticker_number"></td>
+										<td><input type="number" class="form-control required-input remainig_qty" name="remainig_qty[]" id="remainig_qty"></td>
+										<td><input type="number" class="form-control required-input remainig_unit" name="remainig_unit[]" id="remainig_unit"></td>
+										<td><input type="number" class="form-control required-input qty_kg" name="qty_kg[]" id="qty_kg"></td>
+										<td><input type="number" class="form-control required-input qty_unit" name="qty_unit[]" id="qty_unit"></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+<<<<<<< HEAD
+			</div>
+			<button type="button" class="btn btn-primary btn-add-chem-waste my-3">Add Chemical Waste</button>
+			<div class="row">
+				<div class="col-md-9" >
+				</div>
+				<div class="col-md-3">
+					<input type="submit" value="Submit" class="btn btn-success" />
+				</div>
+			</div>
+			</form>
+=======
+			<button type="button" class="btn btn-primary btn-add-chem-waste my-2">Add Chemical Waste</button>
+>>>>>>> 725e0eee565a13d175720cf623165eea2d3363c8
+		</div>
+	</div>
+</div>
+
+<script>
+	var chem_field = 1;
+	$(document).ready(function() {
+		$(document).on('click', '.btn-add-chem-waste', function() {
+					$('.tbody-chem-fields').append('<tr id="tr-chem-field'+chem_field+'"> <td> <select class="form-control required-input hw_number" name="hw_number[]" id="hw_number" data-parsley-required="true">'+
+											'<option value="">Select HW</option>'+
+			                            	'<option value="D499">D499</option>'+
+			                        	'</select> </td>'+
+										'<td><input type="text" class="form-control required-input bottle_number" name="bottle_number[]" id="bottle_number"></td>'+
+										'<td><input type="text" class="form-control required-input sticker_number" name="sticker_number[]" id="sticker_number"></td>'+
+										'<td><input type="number" class="form-control required-input remainig_qty" name="remainig_qty[]" id="remainig_qty"></td>'+
+										'<td><input type="number" class="form-control required-input remainig_unit" name="remainig_unit[]" id="remainig_unit"></td>'+
+										'<td><input type="number" class="form-control required-input qty_kg" name="qty_kg[]" id="qty_kg"></td>'+
+										'<td><input type="number" class="form-control required-input qty_unit" name="qty_unit[]" id="qty_unit"></td>'+
+									'<td><button type="button" class="btn btn-danger btn-delete-field" data-id="'+chem_field+'">Delete</button></td></tr>');
+					chem_field++;
+		});
+
+		$(document).on('click', '.btn-delete-field', function() {
+			var field_no = $(this).attr('data-id');
+			alert(field_no);
+			$('#tr-chem-field'+field_no).remove();
+		});
+		
+			administrators = $("#administrators").DataTable({
+				ajax: {
+					url: "/admin/ajax/load-administators",
+					dataSrc: ''
+				},
+				responsive:true,
+				"order": [[ 6, "desc" ]],
+				columns: [
+				{ data: 'account_id'},
+				{ data: null},
+				{ data: 'email' },
+				{ data: 'contact_number'},
+				{ data: 'username' },
+				{ data: 'created_at'},
+				{ data: 'actions'},
+				{ defaultContent: "<button class='btn btn-primary btn-sm btn-edit'>Edit</button> <button class='btn btn-secondary btn-sm btn-delete'>Delete</button>"}
+				],
+				columnDefs: [
+				{ className: "hidden", "targets": [0]},
+				{ className: "acct-name", "targets": [1]},
+				]
+		});
+	});
+</script>
